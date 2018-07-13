@@ -119,6 +119,8 @@ class MGLIntegrator {
     }
 
     getZoom() {
+        // FIXME, this wouldnt be needed and the renderer could be simplified if we used the MGL getZoom() method
+        // we would avoid having to use the viewport resolution ourselves too
         const b = this.map.getBounds();
         const c = this.map.getCenter();
         const nw = b.getNorthWest();
